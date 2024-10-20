@@ -13,8 +13,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      # Build steps can be added here if needed, for example, for static site generators like Jekyll, Hugo, etc.
+      # If not, you can directly deploy as below
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Path to the directory to publish (change if necessary)
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use the built-in token for authentication
+          publish_dir: ./  # Adjust this to the directory that contains the files to be deployed (usually './public' or similar)
