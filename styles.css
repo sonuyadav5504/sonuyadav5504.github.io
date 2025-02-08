@@ -49,4 +49,43 @@ nav a:hover {
     border-radius: 8px;
 }
 
+/* Resume page specific styles */
+.download-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+}
+
+.view-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+/* PDF embed styling */
+embed {
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+/* Google Drive link style */
+.drive-link {
+    color: #1a73e8;
+    text-decoration: none;
+    border-bottom: 2px solid #1a73e8;
+    padding-bottom: 2px;
+}
+
 /* Add more styles as needed */
