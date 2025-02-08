@@ -1,20 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonu Yadav - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .profile-img {
+            width: 150px;
+            border-radius: 50%;
+            transition: transform 0.5s;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.1);
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        .about-section, .education-section {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .book-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .book-page {
+            width: 200px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .book-inner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+        }
+
+        .book-page:hover .book-inner {
+            transform: rotateY(180deg);
+        }
+
+        .page-front, .page-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            border-radius: 10px;
+        }
+
+        .page-front {
+            background: url('assets/images/1.jpg') center/cover;
+        }
+
+        .page-back {
+            background: url('assets/images/2.jpg') center/cover;
+            transform: rotateY(180deg);
+        }
+    </style>
 </head>
 <body>
     <nav>
         <a href="index.html">Home</a>
         <a href="resume.html">Resume</a>
         <a href="projects.html">Projects</a>
-        <a href="links.html">Links</a>
+        <a href="links.html">Coding-portfolio</a>
     </nav>
 
     <div class="container">
-        <img src="assets/images/3.jpg" alt="sonu" class="profile-img">
-        
+        <img src="assets/images/3.jpg" alt="Sonu" class="profile-img">
         <h1>Hi, I'm Sonu Yadav</h1>
         
         <div class="about-section">
@@ -26,9 +122,24 @@
             <h2>Education</h2>
             <p>M.Tech AI, Indian Institute of Technology Delhi</p>
             <p>[2023 - 2025]</p>
-            <p></p>
             <p>B.Tech CSE, Marwadi Education Foundation, Rajkot, Gujarat</p>
             <p>[2019 - 2023]</p>            
+        </div>
+    </div>
+
+    <div class="book-container">
+        <div class="book-page">
+            <div class="book-inner">
+                <div class="page-front"></div>
+                <div class="page-back"></div>
+            </div>
+        </div>
+
+        <div class="book-page">
+            <div class="book-inner">
+                <div class="page-front" style="background: url('assets/images/4.jpg') center/cover;"></div>
+                <div class="page-back" style="background: url('assets/images/5.jpg') center/cover; transform: rotateY(180deg);"></div>
+            </div>
         </div>
     </div>
 </body>
