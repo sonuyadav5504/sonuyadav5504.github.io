@@ -126,6 +126,31 @@
             backface-visibility: hidden;
             border-radius: 10px;
         }
+        .edu-entry {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .edu-logo {
+            width: 50px;  /* Adjust size as needed */
+            height: auto;
+            border-radius: 5px; /* Optional for rounded corners */
+        }
+        .company-logo {
+            width: 80px;  /* Adjust size as needed */
+            height: auto;
+            display: block; /* Ensures proper alignment */
+            margin: 10px auto; /* Centers the logo */
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
     </style>
 </head>
 <body>
@@ -145,16 +170,29 @@
         <div class="details">
             <div class="about-section">
                 <h2>About Me</h2>
-                <p>Currently I'm pursuing M.Tech in AI from IIT - Delhi.</p>
+                <div class="about-content">
+                    <img src="assets/images/honda.png" alt="Honda Logo" class="company-logo">
+                    <div>
+                        <p>Incoming AI Researcher @Honda R&D, Japan</p>
+                        <p>Currently I'm pursuing M.Tech in AI from IIT - Delhi</p>
+                    </div>
+                </div>
             </div>
 
             <div class="education-section">
                 <h2>Education</h2>
-                <p>M.Tech AI, Indian Institute of Technology Delhi</p>
-                <p>[2023 - 2025]</p>
-                <p>B.Tech CSE, Marwadi Education Foundation, Rajkot, Gujarat</p>
-                <p>[2019 - 2023]</p>            
+            
+                <div class="edu-entry">
+                    <img src="assets/images/iitd.png" alt="IIT Delhi" class="edu-logo">
+                    <p><strong>M.Tech AI</strong>, Indian Institute of Technology Delhi [2023 - 2025]</p>
+                </div>
+            
+                <div class="edu-entry">
+                    <img src="assets/images/mefgi" alt="Marwadi University" class="edu-logo">
+                    <p><strong>B.Tech CSE</strong>, Marwadi Education Foundation, Rajkot, Gujarat [2019 - 2023]</p>
+                </div>
             </div>
+
         </div>
 
         <div class="profile">
