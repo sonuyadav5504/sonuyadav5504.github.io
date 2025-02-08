@@ -57,22 +57,23 @@
             padding: 20px;
             max-width: 1200px;
             margin: auto;
-            text-align: left;
         }
         
-        /* Aligns education section to the left */
+        /* Ensures the education section is left-aligned */
         .details {
             flex: 1;
             padding: 20px;
             text-align: left;
         }
         
-        /* Moves extra images to the rightmost side */
+        /* Moves extra images completely to the right */
         .profile {
             flex: 0 0 auto;
             display: flex;
             justify-content: flex-end;
+            margin-left: auto; /* Pushes it to the extreme right */
         }
+
 
 
         .about-section, .education-section {
@@ -146,8 +147,9 @@
         .company-logo {
             width: 50px;  /* Adjust size as needed */
             height: auto;
-            display: block; /* Ensures proper alignment */
-            margin: 5px auto; /* Centers the logo */
+            border-radius: 5px;
+/*             display: block; /* Ensures proper alignment */
+/*             margin: 5px auto; /* Centers the logo */ */ */
         }
         
         .about-content {
